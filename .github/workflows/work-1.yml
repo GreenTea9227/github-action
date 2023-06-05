@@ -11,3 +11,14 @@ jobs:
         run: echo "Hi"
       - name: sayMyName
         run: echo "${{ github.actor }}"
+  hello2:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Create Directory
+       run: mkdir -p common
+     - name: Create file
+       run: touch common/A
+     - name: write
+       run: echo "This is a sample text" >> common/A
+       
+  
